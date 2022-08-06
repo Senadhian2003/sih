@@ -195,7 +195,7 @@ sup {
   top: -.5em; }
 
 a {
-  color: #7571f9;
+  color: black;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
@@ -14705,3 +14705,23 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
       color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
+
+.a1
+{
+  color: var(--blue);
+  font-weight: bold;
+  font-size: large;
+}
+
+.p1
+{
+  color: black;
+  font-size: medium;
+}
+
+.a2
+{
+  color: var(--blue);
+  font-weight: 500;
+  font-size: medium;
+}
