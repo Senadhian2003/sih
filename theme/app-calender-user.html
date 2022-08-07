@@ -9,6 +9,7 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
     <!-- Custom Stylesheet -->
+    <link href="./plugins/fullcalendar/css/fullcalendar.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
 </head>
@@ -216,7 +217,7 @@
                                         </li>
                                         
                                         <hr class="my-2">
-                                       
+                                        
                                         <li><a href="page-login.html"><i class="icon-key"></i> <span>Logout</span></a></li>
                                     </ul>
                                 </div>
@@ -257,9 +258,6 @@
                             <li><a href="./newsAndLaws.html">News and LAWS</a></li>
                             <li><a href="./media.html">Media</a></li>
                             
-                            
-                            
-                            
                         </ul>
                     </li>
                     <li class="nav-label">Apps</li>
@@ -296,6 +294,7 @@
                         </ul>
                     </li>
                     
+                    
                     <li class="nav-label">Table</li>
                     <li>
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
@@ -306,6 +305,7 @@
                             <li><a href="./table-datatable.html" aria-expanded="false">Data Table</a></li>
                         </ul>
                     </li>
+                    
                     <li>
                         <a  href="javascript:void()" aria-expanded="false">
                             <i class="icon-notebook menu-icon"></i><span class="nav-text">Logout</span>
@@ -336,48 +336,80 @@
 
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <h5 style="display: inline; color: #454c52;" >Event :</h5>
-                                <p style="display: inline;">Capacity Building Programme on Labour Codes and Rules</p>
-                                <br>
-                                <h5 style="display: inline; color: #454c52;" >Duration :</h5>
-                                <p style="display: inline;">01/08/2022 to 05/08/2022</p>
-                                <br>
-                                <h5 style="display: inline; color: #454c52;" >Staff :</h5>
-                                <p style="display: inline;">Mr. Priyadarsan Amitav Khuntia</p>
+                                <div class="card-title">
+                                    <h4>Calendar</h4>
+                                </div>
+                                <div class="row">
+                                    
+                                    <div class="col-md-12">
+                                        <div class="card-box m-b-50">
+                                            <div id="calendar"></div>
+                                        </div>
+                                    </div>
 
+                                    <!-- end col -->
+                                    <!-- BEGIN MODAL -->
+                                    <div class="modal fade none-border" id="event-modal">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title"><strong>Add New Event</strong></h4>
+                                                </div>
+                                                <div class="modal-body"></div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-success save-event waves-effect waves-light">Create event</button>
+                                                    <button type="button" class="btn btn-danger delete-event waves-effect waves-light" data-dismiss="modal">Delete</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Modal Add Category -->
+                                    <div class="modal fade none-border" id="add-category">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title"><strong>Add a category</strong></h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <label class="control-label">Category Name</label>
+                                                                <input class="form-control form-white" placeholder="Enter name" type="text" name="category-name">
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <label class="control-label">Choose Category Color</label>
+                                                                <select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
+                                                                    <option value="success">Success</option>
+                                                                    <option value="danger">Danger</option>
+                                                                    <option value="info">Info</option>
+                                                                    <option value="pink">Pink</option>
+                                                                    <option value="primary">Primary</option>
+                                                                    <option value="warning">Warning</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-danger waves-effect waves-light save-category" data-dismiss="modal">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END MODAL -->
+                                </div>
                             </div>
                         </div>
+                        <!-- /# card -->
                     </div>
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 style="display: inline;" >Event :</h5>
-                                <p style="display: inline;">Capacity Building Programme on Labour Codes and Rules</p>
-                                <br>
-                                <h5 style="display: inline;" >Duration :</h5>
-                                <p style="display: inline;">01/08/2022 to 05/08/2022</p>
-                                <br>
-                                <h5 style="display: inline;" >Staff :</h5>
-                                <p style="display: inline;">Mr. Priyadarsan Amitav Khuntia</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <p><a class="a1" href="">Training Programme on Gender and Labour Issues</a></p>
-                                <p class="p1">Taken by - <a class="a2" href="">Mr. Tinesh Raj</a></p>
-                                <p class="p1">01/08/2022 to 05/08/2022</p>
-                                <p class="p1">The programme aims at strengthening the understanding of participants on gender and labour issues.The programme would acquaint the participants with the various inequalities prevalent in the labour market and also enable them to develop an understanding about the challenges existing in the labour market.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- /# column -->
                 </div>
-                
             </div>
             <!-- #/ container -->
         </div>
@@ -392,7 +424,6 @@
         <div class="footer">
             <div class="copyright">
                 
-            </div>
         </div>
         <!--**********************************
             Footer end
@@ -410,6 +441,12 @@
     <script src="js/settings.js"></script>
     <script src="js/gleek.js"></script>
     <script src="js/styleSwitcher.js"></script>
+
+    
+    <script src="./plugins/jqueryui/js/jquery-ui.min.js"></script>
+    <script src="./plugins/moment/moment.min.js"></script>
+    <script src="./plugins/fullcalendar/js/fullcalendar.min.js"></script>
+    <script src="./js/plugins-init/fullcalendar-init.js"></script>
 
 </body>
 
