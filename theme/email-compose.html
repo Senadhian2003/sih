@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Quixlab - Bootstrap Admin Dashboard Template by Themefisher.com</title>
+    <title>sih2</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
     <!-- Custom Stylesheet -->
@@ -383,26 +383,26 @@
                                     <div class="compose-content mt-5">
                                         <form action="#">
                                             <div class="form-group">
-                                                <input type="text" class="form-control bg-transparent" placeholder=" To">
+                                                <input type="text" id="smail" class="form-control bg-transparent" placeholder=" To">
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" class="form-control bg-transparent" placeholder=" Subject">
+                                                <input type="text" id="sub" class="form-control bg-transparent" placeholder=" Subject">
                                             </div>
                                             <div class="form-group">
-                                                <textarea class="textarea_editor form-control bg-light" rows="15" placeholder="Enter text ..."></textarea>
+                                                <textarea id="msg" class="textarea_editor form-control bg-light" rows="15" placeholder="Enter text ..."></textarea>
                                             </div>
                                         </form>
-                                        <h5 class="m-b-20"><i class="fa fa-paperclip m-r-5 f-s-18"></i> Attatchment</h5>
+                                        <!-- <h5 class="m-b-20"><i class="fa fa-paperclip m-r-5 f-s-18"></i> Attatchment</h5>
                                         <form action="#" class="dropzone">
                                             <div class="form-group">
                                                 <div class="fallback">
                                                     <input class="l-border-1" name="file" type="file" multiple="multiple">
                                                 </div>
                                             </div>
-                                        </form>
+                                        </form> -->
                                     </div>
                                     <div class="text-left m-t-15">
-                                        <button class="btn btn-primary m-b-30 m-t-15 f-s-14 p-l-20 p-r-20 m-r-10" type="button"><i class="fa fa-paper-plane m-r-5"></i> Send</button>
+                                        <button id="btn" class="btn btn-primary m-b-30 m-t-15 f-s-14 p-l-20 p-r-20 m-r-10" type="button"><i class="fa fa-paper-plane m-r-5"></i> Send</button>
                                         <button class="btn btn-dark m-b-30 m-t-15 f-s-14 p-l-20 p-r-20" type="button"><i class="ti-close m-r-5 f-s-12"></i> Discard</button>
                                     </div>
                                 </div>
@@ -442,7 +442,9 @@
     <script src="js/settings.js"></script>
     <script src="js/gleek.js"></script>
     <script src="js/styleSwitcher.js"></script>
-
+    <script src="js/mail.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
 </body>
 
 </html>
